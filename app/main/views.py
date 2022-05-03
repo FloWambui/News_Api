@@ -1,9 +1,8 @@
-from unicodedata import category
 from flask import render_template
-from app.main import app
+from app import main
 from ..request import get_news
 
-@app.route('/')
+@main.route('/')
 def home():
     title = 'Debunk News'
     data = "Welcome to Debunk News"
