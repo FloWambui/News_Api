@@ -1,10 +1,16 @@
-{% extends 'base.html' %}
-{% block content %}
+{% extends 'base.html' %} {% block body %}
 
-
-<h1> {{datum}} </h1>
+<h1>{{datum}}</h1>
 <h1>Get all the information you need debunked for you</h1>
-<p>{{articles.id}}</p>
-<p>{{articles.title}}</p>
-<p>{{articles.description}}</p>
-{% endblock %} 
+{% for news in articles %}
+<p>{{news.urlToImage}}</p>
+<p>{{news.title}}</p>
+<p>{{news.description}}</p>
+<p>{{news.url}}</p>
+<p>{{news.publishedAt}}</p>
+
+
+{% endfor %}
+
+
+{% endblock body %}
