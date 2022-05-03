@@ -1,7 +1,7 @@
 from unicodedata import category
 from flask import render_template
-from app import app
-from .request import get_news
+from app.main import app
+from ..request import get_news
 
 @app.route('/')
 def home():

@@ -1,14 +1,14 @@
-from app import app
+from app.main import app
 from urllib import request
 import urllib.request
 import json
 
-from app.news_test import News
+from tests.news_test import News
 
 
-from .models import news
+from .models import models
 
-news=news.News
+models=models.News
 
 #Get api key
 api_key = app.config['NEWS_API_KEY']
