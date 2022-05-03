@@ -1,5 +1,5 @@
 from flask import render_template
-from app import main
+from . import main
 from ..request import get_news
 
 @main.route('/')
