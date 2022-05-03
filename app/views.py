@@ -7,6 +7,6 @@ from .request import get_news
 def home():
     title = 'Debunk News'
     data = "Welcome to Debunk News"
-    news=get_news
+    news=get_news(id)
     return render_template('index.html', title=title, datum=data, articles=news)
 
