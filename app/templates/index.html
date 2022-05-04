@@ -1,16 +1,40 @@
 {% extends 'base.html' %} {% block body %}
+<h1 class="text-center">{{datum}}</h1>
+<h6 class="text-center">Get all the information you need debunked for you</h6>
 
-<h1>{{datum}}</h1>
-<h1>Get all the information you need debunked for you</h1>
-{% for news in articles %}
-<p>{{news.urlToImage}}</p>
-<p>{{news.title}}</p>
-<p>{{news.description}}</p>
-<p>{{news.url}}</p>
-<p>{{news.publishedAt}}</p>
-
-
-{% endfor %}
-
+<div class="container-fluid">
+  <div class="row">
+    {% for news in articles %}
+    <div class="col-3 col-lg-3 col-md-6 col-sm-12">
+      <div class="card" style="width: 28rem; height: 38rem">
+        <img
+          src="{{news.urlToImage}}"
+          class="card-img-top image-fluid"
+          alt="Headline Image"
+        />
+        <div class="card-body">
+          <h5 class="card-title">{{news.title}}</h5>
+          <p class="card-text">{{news.description}}</p>
+          
+          <div class="footer">
+            <a href="{{news.url}}" class="btn btn-warning">Read More >></a>
+            <p>
+              <i
+                ><small><span>Date: </span>{{news.publishedAt}}</small></i
+              >
+            </p>
+            <p>
+              <i
+                ><small><span>Written By: </span>{{news.author}}</small></i
+              >
+            </p>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
 
 {% endblock body %}
