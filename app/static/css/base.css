@@ -6,3 +6,24 @@ body{
     background-color: #182825;
     color: #33673B;
 }
+footer{
+    background-color:#182825 !important;
+    border-top: 3px solid black;
+}
+footer ul{
+    display: flex;
+    flex-direction: row !important;
+    list-style: none;
+    justify-content: center;
+    align-items: center;
+    text-align: center
+}
+footer ul li{
+    margin: 0 20px;
+}
+footer a{
+    color:#F7C132;
+}
+footer a:hover{
+    color:#33673B !important;
+}
