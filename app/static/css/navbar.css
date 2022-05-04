@@ -1,7 +1,11 @@
 .navbar{
     background-color: #182825 !important;
-    border-bottom: 2px solid black;
-    margin-bottom: 150px !important;
+    border-bottom: 3px solid black;
+    margin-bottom: 150px !important;  
     
-    
+}
+.navbar-brand{
+    font-family: 'Rubik Wet Paint', cursive !important;
+    color: #F7C132 !important;
+    font-size: 28px !important;
 }
